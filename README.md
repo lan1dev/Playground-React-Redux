@@ -23,3 +23,7 @@ Starta app:
 Kör tester:
 
 `npm run test`
+
+Kör test coverage:
+
+`npm run testcoverage`

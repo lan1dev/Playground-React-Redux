@@ -9,7 +9,7 @@ describe('AddToDoForm', () => {
 
   const Wrapper = () => {
     if (!wrapper) {
-      wrapper = shallow(<AddToDoForm />);
+      wrapper = shallow(<AddToDoForm {...props} />);
     }
     return wrapper;
   };
@@ -23,6 +23,11 @@ describe('AddToDoForm', () => {
   });
 
   describe('when component has rendered', () => {
+    props = {
+      addToDo: jest.fn(),
+      handleChange: jest.fn(),
+      addToDo: ''
+    };
     it('Should match snapshot', () => {
       expect(toJson(Wrapper())).toMatchSnapshot();
     });

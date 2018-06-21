@@ -7,5 +7,6 @@ module.exports = {
   moduleNameMapper: {
     '^.+\\.(css|less)$': 'identity-obj-proxy'
   },
+  testPathIgnorePatterns: ['scripts'],
   snapshotSerializers: ['enzyme-to-json/serializer']
 };
