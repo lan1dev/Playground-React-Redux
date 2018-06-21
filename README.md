@@ -19,3 +19,7 @@ Installera dependencies:
 Starta app:
 
 `npm start`
+
+Kör tester:
+
+`npm run test`

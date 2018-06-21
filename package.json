@@ -12,6 +12,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "testcoverage": "react-scripts test --env=jsdom --coverage",
     "eject": "react-scripts eject",
     "precommit": "lint-staged"
   },
@@ -23,6 +24,9 @@
     ]
   },
   "devDependencies": {
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.4",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
@@ -31,7 +35,9 @@
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.9.1",
     "husky": "^0.14.3",
+    "jest-enzyme": "^6.0.2",
     "lint-staged": "^7.2.0",
-    "prettier": "^1.13.5"
+    "prettier": "^1.13.5",
+    "react-test-renderer": "^16.4.1"
   }
 }
