@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './styles.css';
+import List from './List';
+import Button from './Button';
 
 const propTypes = {
   todos: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -8,16 +9,16 @@ const propTypes = {
 };
 
 const ToDoList = ({ todos, removeToDo }) => (
-  <ul className="todo-list">
+  <List>
     {todos.map(todo => (
       <li>
         {todo} -{' '}
-        <button className="error" name={todo} onClick={removeToDo}>
+        <Button error name={todo} onClick={removeToDo}>
           Remove
-        </button>
+        </Button>
       </li>
     ))}
-  </ul>
+  </List>
 );
 
 ToDoList.propTypes = propTypes;

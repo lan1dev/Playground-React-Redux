@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './styles.css';
-import Button from '../Button';
+import Button from './Button';
+import Input from './Input';
 
 const propTypes = {
   addToDo: PropTypes.func.isRequired,
@@ -11,7 +11,7 @@ const propTypes = {
 
 const AddToDoForm = ({ addToDo, handleChange, toDoValue }) => (
   <form onSubmit={addToDo}>
-    <input className="todo-input" name="todo" onChange={handleChange} value={toDoValue} />
+    <Input className="todo-input" name="todo" onChange={handleChange} value={toDoValue} />
     <Button>Add</Button>
   </form>
 );

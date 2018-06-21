@@ -2,12 +2,12 @@
 
 exports[`AddToDoForm when component has rendered Should match snapshot 1`] = `
 <form>
-  <input
+  <styled.input
     className="todo-input"
     name="todo"
   />
-  <Button>
+  <styled.button>
     Add
-  </Button>
+  </styled.button>
 </form>
 `;

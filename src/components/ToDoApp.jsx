@@ -1,10 +1,9 @@
 import React, { Component, Fragment } from 'react';
-import './styles.css';
-import Title from '../Title';
-import AddToDoForm from '../AddToDoForm';
-import ToDoList from '../ToDoList';
-import Error from '../Error';
-import ToDoListWrapper from '../ToDoListWrapper';
+import Title from './Title';
+import AddToDoForm from './AddToDoForm';
+import ToDoList from './ToDoList';
+import Error from './Error';
+import ToDoListWrapper from './ToDoListWrapper';
 
 class App extends Component {
   state = {

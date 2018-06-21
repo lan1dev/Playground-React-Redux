@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import AddToDoForm from './index';
+import AddToDoForm from '../components/AddToDoForm';
 
 describe('AddToDoForm', () => {
   let props;
