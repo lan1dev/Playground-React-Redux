@@ -1,15 +1,15 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import AddToDoForm from '../components/AddToDoForm';
+import ToDoForm from '../forms/ToDoForm';
 
-describe('AddToDoForm', () => {
+describe('ToDoForm', () => {
   let props;
   let wrapper;
 
   const Wrapper = () => {
     if (!wrapper) {
-      wrapper = shallow(<AddToDoForm {...props} />);
+      wrapper = shallow(<ToDoForm {...props} />);
     }
     return wrapper;
   };

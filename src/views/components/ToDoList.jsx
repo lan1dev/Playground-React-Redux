@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import List from './List';
-import Button from './Button';
+import List from '../common/List';
+import Button from '../common/Button';
 
 const propTypes = {
   todos: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -11,9 +11,9 @@ const propTypes = {
 const ToDoList = ({ todos, removeToDo }) => (
   <List>
     {todos.map(todo => (
-      <li>
+      <li key={todo}>
         {todo} -{' '}
-        <Button error name={todo} onClick={removeToDo}>
+        <Button error name={todo} onClick={({ target: { name } }) => removeToDo(name)}>
           Remove
         </Button>
       </li>

@@ -2,7 +2,8 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import 'jest-styled-components';
-import Button from '../components/Button';
+import Button from '../common/Button';
+import colors from '../constants/colors';
 
 describe('Button', () => {
   let props;
@@ -31,12 +32,12 @@ describe('Button', () => {
 
     it('should not have green background', () => {
       const tree = Wrapper();
-      expect(tree).toHaveStyleRule('background', '#00695c');
+      expect(tree).toHaveStyleRule('background', colors.primary);
     });
 
-    it('should not have green color', () => {
+    it('should have green color', () => {
       const tree = Wrapper();
-      expect(tree).toHaveStyleRule('color', '#b2dfdb');
+      expect(tree).toHaveStyleRule('color', colors.lightPrimary);
     });
   });
 
@@ -47,22 +48,22 @@ describe('Button', () => {
       expect(toJson(Wrapper())).toMatchSnapshot();
     });
 
-    it('should be have red background', () => {
+    it('should have red background', () => {
       props.children = 'Text';
       props.error = true;
-      expect(Wrapper()).toHaveStyleRule('background', '#dd2c00');
+      expect(Wrapper()).toHaveStyleRule('background', colors.error);
     });
-    it('should be have red color', () => {
+    it('should have red color', () => {
       props.children = 'Text';
       props.error = true;
-      expect(Wrapper()).toHaveStyleRule('color', '#FFAB91');
+      expect(Wrapper()).toHaveStyleRule('color', colors.lightError);
     });
     describe('user hovers over the button', () => {
       it('should have darkred background', () => {
         props.children = 'Text';
         props.error = true;
         wrapper = Wrapper();
-        expect(wrapper).toHaveStyleRule('background', '#BF360C', {
+        expect(wrapper).toHaveStyleRule('background', colors.darkError, {
           modifier: ':hover'
         });
       });

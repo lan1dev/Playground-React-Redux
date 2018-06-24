@@ -4,7 +4,7 @@ exports[`Button when props are defined should match snapshot 1`] = `
 .c0 {
   border: #b2dfdb;
   background: #dd2c00;
-  color: #FFAB91;
+  color: #fff;
   height: 50px;
   width: 100px;
   font-size: 18px;
@@ -16,7 +16,7 @@ exports[`Button when props are defined should match snapshot 1`] = `
 .c0:hover {
   -webkit-transition: background 0.3s;
   transition: background 0.3s;
-  background: #BF360C;
+  background: #c42700;
 }
 
 <button
@@ -30,7 +30,7 @@ exports[`Button when props are undefined Should match snapshot 1`] = `
 .c0 {
   border: #b2dfdb;
   background: #00695c;
-  color: #b2dfdb;
+  color: #cffff9;
   height: 50px;
   width: 100px;
   font-size: 18px;
@@ -42,7 +42,7 @@ exports[`Button when props are undefined Should match snapshot 1`] = `
 .c0:hover {
   -webkit-transition: background 0.3s;
   transition: background 0.3s;
-  background: #004d40;
+  background: #005046;
 }
 
 <button
